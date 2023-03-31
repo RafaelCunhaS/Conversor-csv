@@ -51,7 +51,9 @@ public class Conversor {
   }
 
   /**
-   * @param caminhoArquivo
+   * Lê conteúdo do arquivo.
+   * 
+   * @param caminhoArquivo Caminho do arquivo a ser lido.
    * @throws IOException Caso ocorra algum problema ao ler os arquivos de entrada ou gravar os
    *         arquivos de saída.
    */
@@ -108,6 +110,8 @@ public class Conversor {
   }
 
   /**
+   * Formata conteúdo.
+   * 
    * @param conteudo Conteúdo a ser formatado.
    * @return Retorna a string formatada.
    */
