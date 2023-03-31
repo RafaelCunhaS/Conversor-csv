@@ -8,6 +8,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Classe principal do projeto.
+ *
+ */
 public class Conversor {
 
   /**
@@ -46,6 +50,11 @@ public class Conversor {
     }
   }
 
+  /**
+   * @param caminhoArquivo
+   * @throws IOException Caso ocorra algum problema ao ler os arquivos de entrada ou gravar os
+   *         arquivos de saída.
+   */
   public ArrayList<String> lerConteudoArquivo(File caminhoArquivo) throws IOException {
     FileReader leitorArquivo = null;
     BufferedReader bufferedLeitor = null;
@@ -69,6 +78,15 @@ public class Conversor {
     return linhasLidas;
   }
 
+  /**
+   * Escreve conteúdo em um novo arquivo.
+   * 
+   * @param caminhoArquivo Caminho do arquivo em que será escrito o conteúdo.
+   * @param conteudo Conteúdo que será escrito no arquivo.
+   * 
+   * @throws IOException Caso ocorra algum problema ao ler os arquivos de entrada ou gravar os
+   *         arquivos de saída.
+   */
   public void escreverConteudoNoArquivo(File caminhoArquivo, ArrayList<String> conteudo)
       throws IOException {
     FileWriter escritorArquivo = null;
@@ -89,6 +107,10 @@ public class Conversor {
     bufferedEscritor.close();
   }
 
+  /**
+   * @param conteudo Conteúdo a ser formatado.
+   * @return Retorna a string formatada.
+   */
   public String formartarLinha(String conteudo) {
     String[] informacoes = conteudo.split(",");
     String nomeCompleto = informacoes[0];
